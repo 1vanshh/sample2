@@ -3,18 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html, body {
-  position: relative;
-  min-height: 100%;
+html {
   overscroll-behavior-y: none;
+  position: relative;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #201a24, #056035);
+  background: linear-gradient(to bottom, #201a24, #065e35);
   color: #ffffff;
 }
 .main{
   height: 100%;
+  max-height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ html, body {
   position: relative;
   padding-top: 30px;
   height: auto;
-  width: 100%;
+  width: 50%;
   border-radius: 0 0 20px 20px;
   margin-bottom: 30px;
   background: linear-gradient(to bottom,  #056035, #013310);
@@ -34,23 +34,29 @@ html, body {
   justify-content: center;
 }
 
+.second__block{
+  position: relative;
+  height: 100%;
+  width: 50%;
+  border-radius: 20px 20px 20px 20px;
+  background: linear-gradient(to bottom, #013310, #056035);
+  padding: 20px 15px 15px 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .second__block,
+  .first__block{
+    width: 100%;
+  }
+}
+
 .logo{
   background-color: rgb(255, 255, 255);
   position: absolute;
   top: 12px;
   left: 12px;
-  width: 7vh;
-  max-width: 100px;
+  max-width: 57px;
   height: auto;
-}
-
-.second__block{
-  position: relative;
-  height: 700px;
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-  background: linear-gradient(to bottom, #013310, #056035);
-  padding: 20px 15px 15px 15px;
 }
 
 .contactButton,
@@ -58,7 +64,8 @@ html, body {
   font-family: 'Jost', sans-serif;
   text-decoration: none;
   height: 45px;
-  width: 220px;
+  width: 60vw;
+  max-width: 220px;
   display: block;
   background-color: rgba(48, 83, 171, 0.53);
   color: #fff;
@@ -138,8 +145,4 @@ html, body {
   font-size: 14px;
   line-height: 130%;
 }
-
-/*.line{*/
-/*  border-bottom: 1px #ffffff solid;*/
-/*}*/
 
